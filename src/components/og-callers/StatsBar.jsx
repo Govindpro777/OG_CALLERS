@@ -3,7 +3,7 @@ import { ChartNoAxesCombined, Flame, Gem, Users } from "lucide-react";
 import { reveal } from "./shared";
 
 const stats = [
-  [Users, "498", "COMMUNITY MEMBERS"],
+  [Users, "58", "COMMUNITY MEMBERS"],
   [ChartNoAxesCombined, "$247.8K", "TOTAL PNL (COMMUNITY)"],
   [Flame, "+12,438%", "TOP TRADER PNL"],
   [Gem, "100%", "COMMUNITY OWNED"],
