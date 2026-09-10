@@ -1,3 +1,3 @@
 # Roadmap
 
-- [ ] Use Vite-only implementation as requested.
+- [x] Use Vite-only implementation as requested.
