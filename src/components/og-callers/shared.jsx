@@ -42,10 +42,10 @@ export function SectionTitle({ icon: Icon, title, subtitle, danger = false, acti
         </span>
         <div className="min-w-0">
           <h2 className={`truncate font-display text-lg font-black uppercase sm:text-xl ${danger ? "text-danger" : "text-primary"}`}>{title}</h2>
-          <p className="text-[11px] text-muted-foreground sm:text-xs">{subtitle}</p>
+          <p className="text-sm text-muted-foreground sm:text-xs">{subtitle}</p>
         </div>
       </div>
-      <a href="#home" className={`mt-1 shrink-0 font-mono text-[9px] font-bold sm:text-[10px] ${danger ? "text-danger" : "text-primary"}`}>
+      <a href="#home" className={`mt-1 shrink-0 font-mono text-[12px] font-bold sm:text-[13px] ${danger ? "text-danger" : "text-primary"}`}>
         {action} →
       </a>
     </div>

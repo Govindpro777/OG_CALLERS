@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-hero-glow" />
       <div className="mx-auto grid min-h-[530px] max-w-[1480px] items-end gap-3 px-5 pt-14 lg:grid-cols-[0.86fr_1.24fr] lg:px-7 lg:pt-8">
         <motion.div initial={{ opacity: 0, x: -35 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15, duration: 0.65 }} className="relative z-10 pb-9 lg:self-center lg:pb-16">
-          <p className="mb-4 font-mono text-[10px] font-black uppercase tracking-[0.34em] text-primary sm:text-xs">Trade / Call / Grow / Together</p>
+          <p className="mb-4 font-mono text-[13px] font-black uppercase tracking-[0.34em] text-primary sm:text-xs">Trade / Call / Grow / Together</p>
           <h1 className="text-glow font-display text-[clamp(3.1rem,8vw,6.9rem)] font-black uppercase leading-[0.78] text-foreground">
             OG <span className="text-primary">Callers</span>
           </h1>

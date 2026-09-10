@@ -17,7 +17,7 @@ export function StatsBar() {
         {stats.map(([Icon, value, label], index) => (
           <motion.div whileHover={{ backgroundColor: "var(--primary-soft)" }} key={label} className={`flex min-w-0 items-center gap-3 px-4 py-5 sm:px-6 ${index % 2 ? "border-l border-border" : ""} ${index > 1 ? "border-t border-border lg:border-t-0" : ""} ${index === 2 ? "lg:border-l" : ""}`}>
             <Icon className="size-7 shrink-0 text-primary" fill="currentColor" />
-            <div className="min-w-0"><p className="font-mono text-sm font-black text-foreground sm:text-base">{value}</p><p className="truncate font-mono text-[8px] text-muted-foreground sm:text-[9px]">{label}</p></div>
+            <div className="min-w-0"><p className="font-mono text-sm font-black text-foreground sm:text-base">{value}</p><p className="truncate font-mono text-sm text-muted-foreground sm:text-[12px]">{label}</p></div>
           </motion.div>
         ))}
       </div>
