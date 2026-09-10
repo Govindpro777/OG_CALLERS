@@ -13,7 +13,7 @@ const traders = [
 // Live leaderboard ranks the community's strongest traders.
 export function LeaderboardSection() {
   return (
-    <Panel id="leaderboard" className="h-full">
+    <Panel id="leaderboard">
       <SectionTitle icon={Trophy} title="Trader Leaderboard" subtitle="Top traders by profit (PNL)" action="LIVE" />
       <div className="overflow-x-auto px-3 pb-3 sm:px-5">
         <div className="min-w-[590px]">

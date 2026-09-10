@@ -12,7 +12,7 @@ const stats = [
 // Community metrics summarize the activity at a glance.
 export function StatsBar() {
   return (
-    <motion.section {...reveal} className="relative z-20 mx-auto -mt-1 max-w-[1400px] px-4 sm:px-7">
+    <motion.section {...reveal} className="relative z-20 mx-auto -mt-1 max-w-[1400px] px-4 sm:px-7 mt-10">
       <div className="panel-frame grid grid-cols-2 overflow-hidden border border-primary/70 bg-panel shadow-neon lg:grid-cols-4">
         {stats.map(([Icon, value, label], index) => (
           <motion.div whileHover={{ backgroundColor: "var(--primary-soft)" }} key={label} className={`flex min-w-0 items-center gap-3 px-4 py-5 sm:px-6 ${index % 2 ? "border-l border-border" : ""} ${index > 1 ? "border-t border-border lg:border-t-0" : ""} ${index === 2 ? "lg:border-l" : ""}`}>
