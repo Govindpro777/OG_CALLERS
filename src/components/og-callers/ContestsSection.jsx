@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Clock3, Gift, Image, LineChart, Trophy, Users, X } from "lucide-react";
-import { Panel, SectionTitle } from "./shared";
+import { Clock3, Gift, Image, LineChart, Trophy, Users } from "lucide-react";
+import { Panel, SectionTitle, XLogoIcon } from "./shared";
 
 const contests = [
-  [X,"X Shill Contest","Shill OG CALLERS on X & get rewarded!","$2,500","4d 12h 34m 21s"],
+  [XLogoIcon,"X Shill Contest","Shill OG CALLERS on X & get rewarded!","$2,500","4d 12h 34m 21s"],
   [Image,"Meme Creation Contest","Create the best OG CALLERS meme!","$1,000","7d 06h 12m 45s"],
   [LineChart,"Trading Challenge","Get the highest PNL this week!","$3,000","10d 03h 27m 10s"],
   [Users,"Community Growth","Invite friends & grow the squad!","$1,500","14d 19h 52m 33s"],

@@ -22,7 +22,7 @@ export function AboutSection() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 text-center">
         <span className="grid size-11 shrink-0 place-items-center rounded-full border border-primary bg-primary/10 text-primary shadow-neon"><CircleUserRound className="size-6" /></span>
         <p className="font-mono text-[12px] uppercase tracking-[0.3em] text-muted-foreground">OG Callers · The first official squad coin</p>
-        <h2 className="text-glow mt-2 font-display text-[clamp(2.4rem,5vw,3.75rem)] font-black uppercase leading-[0.95] text-foreground">
+        <h2 className="text-glow mt-2 font-display text-[clamp(2rem,4.2vw,3.25rem)] font-bold uppercase leading-tight text-foreground">
           What is <span className="text-primary">OG Callers</span>
         </h2>
         <p className="mt-1 font-mono text-xs font-bold uppercase tracking-[0.25em] text-primary">The thesis behind the squad coin</p>
@@ -43,7 +43,7 @@ export function AboutSection() {
 
       <div className="mx-auto mt-10 max-w-4xl rounded-md border border-primary bg-primary/10 p-6 text-center shadow-neon-strong">
         <span className="mx-auto grid size-12 place-items-center rounded-full border border-primary bg-background text-primary"><Target className="size-6" /></span>
-        <p className="mt-4 font-display text-xl font-black uppercase text-primary sm:text-2xl">Build the squad. Hold the coin. Call it out. Climb the leaderboard.</p>
+        <p className="mt-4 font-display text-lg font-bold uppercase text-primary sm:text-xl">Build the squad. Hold the coin. Call it out. Climb the leaderboard.</p>
       </div>
     </Panel>
   );

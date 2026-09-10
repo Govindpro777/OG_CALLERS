@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Barlow Condensed", sans-serif;
-  --font-sans: "Barlow", sans-serif;
-  --font-mono: "Space Mono", monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
   --font-hand: "Permanent Marker", cursive;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
