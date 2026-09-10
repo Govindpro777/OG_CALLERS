@@ -14,6 +14,6 @@ function FameCard({ item, danger, index }) {
 export function FameSections() {
   return <div className="grid gap-5 xl:grid-cols-[1.25fr_.95fr]">
     <Panel id="fame"><SectionTitle icon={Star} title="Hall of Fame" subtitle="Legendary traders. Real dedication." /><div className="grid grid-cols-2 gap-3 p-4 sm:grid-cols-4">{heroes.map((item,index)=><FameCard key={item[0]} item={item} index={index} />)}</div></Panel>
-    <Panel id="shame" danger><SectionTitle icon={AlertTriangle} title="Shame of Fame" subtitle="Bad calls. Lessons for everyone." danger /><div className="grid grid-cols-2 gap-3 p-4">{shame.map((item,index)=><FameCard key={item[0]} item={item} danger index={index} />)}</div></Panel>
+    <Panel id="shame" danger><SectionTitle icon={AlertTriangle} title="Shame of Fame" subtitle="Bad calls. Lessons for everyone." danger /><div className="grid grid-cols-2 gap-3 p-4 sm:grid-cols-4">{shame.map((item,index)=><FameCard key={item[0]} item={item} danger index={index} />)}</div></Panel>
   </div>;
 }
