@@ -11,7 +11,7 @@
 - Recreate the mascot/group artwork with original CSS and icon-based treatments; use the uploaded screenshot only as the reference because no separate background artwork was supplied.
 
 ## Technical details
-- Keep the TanStack Start routing required by the project while implementing all page sections as JSX modules.
+- Keep the implementation Vite-only while building all page sections as JSX modules.
 - Use Tailwind CSS classes for layout/styling, Lucide icons, and Framer Motion for animation.
 - Add page-specific title, description, Open Graph, and Twitter metadata.
 - Verify the result in the browser at desktop and mobile sizes and resolve any build or console errors.
