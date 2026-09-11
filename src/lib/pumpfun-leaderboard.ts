@@ -11,161 +11,161 @@ export type LeaderboardTrader = {
 };
 
 const TRACKED_WALLETS = [
-  // {
-  //   name: "OGPeach",
-  //   link: "https://join.pump.fun/HSag/7gx4z3x2",
-  //   wallet: "CHXHjEdbzDxqzXzsh9Vs1jxMixnBSAJuqQ9bjZMzFqn9",
-  // },
-  // {
-  //   name: "berdush",
-  //   link: "https://join.pump.fun/HSag/n9tgbdif",
-  //   wallet: "HLNMn7ZcLmxfYXt4QTpc8g6xMqZoXR4ixpehswgbQhVG",
-  // },
-  // {
-  //   name: "appiesol_",
-  //   link: "https://join.pump.fun/HSag/cekxej0j",
-  //   wallet: "DieowDJ137xDRyCDn3YZYfAe4qzeGmdQJvryyqdWhtuc",
-  // },
-  // {
-  //   name: "borealj",
-  //   link: "https://pump.fun/profile/H3T4nbQV119capeaPjXK1FJPK3PuB5neAa2Dicyek7wG",
-  //   wallet: "H3T4nbQV119capeaPjXK1FJPK3PuB5neAa2Dicyek7wG",
-  // },
-  // {
-  //   name: "SagezUP",
-  //   link: "https://pump.fun/profile/AHGALeqAuRkC7cQJrKwjdL4fSxiz9HkgtMRcRGsrwaqk",
-  //   wallet: "AHGALeqAuRkC7cQJrKwjdL4fSxiz9HkgtMRcRGsrwaqk",
-  // },
-  // {
-  //   name: "spectacular",
-  //   link: "https://pump.fun/profile/6Fz4cnnvdRSqQzUnLS3Q5M35vo8uRnu5rag6Q6Kbb7s",
-  //   wallet: "6Fz4cnnvdRSqQzUnLS3Q5M35vo8uRnu5rag6Q6Kbb7s",
-  // },
-  // {
-  //   name: "OGSniffer",
-  //   link: "https://pump.fun/profile/8oHccwEN4eCk6Anb3dxCeT9UsNjW6pS8cU8RXadaC7i7",
-  //   wallet: "8oHccwEN4eCk6Anb3dxCeT9UsNjW6pS8cU8RXadaC7i7",
-  // },
-  // {
-  //   name: "tumors",
-  //   link: "https://pump.fun/profile/B6GK4Uk5HfcexdqfaFQKCu7cZw5LYdJ6bhi25BWq1Nic",
-  //   wallet: "B6GK4Uk5HfcexdqfaFQKCu7cZw5LYdJ6bhi25BWq1Nic",
-  // },
-  // {
-  //   name: "adebola",
-  //   link: "https://pump.fun/profile/DNyA4HRP65X1FB8HnqsyT1ZAvvb5ng8eZq4b1oAiWesC",
-  //   wallet: "DNyA4HRP65X1FB8HnqsyT1ZAvvb5ng8eZq4b1oAiWesC",
-  // },
-  // {
-  //   name: "roommate",
-  //   link: "https://pump.fun/profile/3SoYUq5eY8gn5p9Uz3fomA5ZbbHEpe6PhitttQ84GHBK",
-  //   wallet: "3SoYUq5eY8gn5p9Uz3fomA5ZbbHEpe6PhitttQ84GHBK",
-  // },
-  // {
-  //   name: "MagicCooker",
-  //   link: "https://pump.fun/profile/BvgE1K46Hd4g5vbeoy1GXfDdvvLZUmELa4WASKjG8skm",
-  //   wallet: "BvgE1K46Hd4g5vbeoy1GXfDdvvLZUmELa4WASKjG8skm",
-  // },
-  // {
-  //   name: "synciemann",
-  //   link: "https://pump.fun/profile/8x1q3VeNkjeznoUa29fF2vVHp2E7Ju9TrwS7y6AyiVMa",
-  //   wallet: "8x1q3VeNkjeznoUa29fF2vVHp2E7Ju9TrwS7y6AyiVMa",
-  // },
-  // {
-  //   name: "gaston_levai",
-  //   link: "https://pump.fun/profile/9fasCqz4yRErTZPEWBUuoYoKZzzSziEGSjAjnj1YHoGh",
-  //   wallet: "9fasCqz4yRErTZPEWBUuoYoKZzzSziEGSjAjnj1YHoGh",
-  // },
-  // {
-  //   name: "jspizzlecryptoo",
-  //   link: "https://pump.fun/profile/4z3WtX32eehkmnaNNstZWyAuVBhj6cgpk5JtkdTa4m4A",
-  //   wallet: "4z3WtX32eehkmnaNNstZWyAuVBhj6cgpk5JtkdTa4m4A",
-  // },
-  // {
-  //   name: "gutssay",
-  //   link: "https://pump.fun/profile/DGma4Uxm9JS6yLNdgYaxsZhwk2nxrRGMfMt5buXbiFCm",
-  //   wallet: "DGma4Uxm9JS6yLNdgYaxsZhwk2nxrRGMfMt5buXbiFCm",
-  // },
-  // {
-  //   name: "shredtrades",
-  //   link: "https://pump.fun/profile/ERhjPxBBain6CV1WTwXjjaeADWmS6P5THReYzLByVBst",
-  //   wallet: "ERhjPxBBain6CV1WTwXjjaeADWmS6P5THReYzLByVBst",
-  // },
-  // {
-  //   name: "DrHeisenberg",
-  //   link: "https://pump.fun/profile/49AuxnyoFm2mkYazK4usgmsEzXJaVurQAm9T5DWZTWuH",
-  //   wallet: "49AuxnyoFm2mkYazK4usgmsEzXJaVurQAm9T5DWZTWuH",
-  // },
-  // {
-  //   name: "ImJustAGuy1993",
-  //   link: "https://pump.fun/profile/2NsiXHVD8Ge2czhsM7cFKM9CTP1XnQHw6LJWGNTfennk",
-  //   wallet: "2NsiXHVD8Ge2czhsM7cFKM9CTP1XnQHw6LJWGNTfennk",
-  // },
-  // {
-  //   name: "Mzgete_",
-  //   link: "https://pump.fun/profile/GTuctg8YR5oH1jdAaGMvkb51MSWPHE9nLCc1zUrwss6L",
-  //   wallet: "GTuctg8YR5oH1jdAaGMvkb51MSWPHE9nLCc1zUrwss6L",
-  // },
-  // {
-  //   name: "younghogey",
-  //   link: "https://pump.fun/profile/9KPMHW2FuTrHBkPa8YQb2PR58V2KQcBXvyM21AFXvhQV",
-  //   wallet: "9KPMHW2FuTrHBkPa8YQb2PR58V2KQcBXvyM21AFXvhQV",
-  // },
-  // {
-  //   name: "edonfx",
-  //   link: "https://pump.fun/profile/GKMUxpHS5uoW1dqjxzyJP66bHC3GbsKaQKU1tzXmzReb",
-  //   wallet: "GKMUxpHS5uoW1dqjxzyJP66bHC3GbsKaQKU1tzXmzReb",
-  // },
-  // {
-  //   name: "CamaboLambo420",
-  //   link: "https://pump.fun/profile/Bfw66Qnx2rWi7y3rZNS5wCSrjcAkkrGV9XVfyay8N3Yj",
-  //   wallet: "Bfw66Qnx2rWi7y3rZNS5wCSrjcAkkrGV9XVfyay8N3Yj",
-  // },
-  // {
-  //   name: "liarliar",
-  //   link: "https://pump.fun/profile/6G8Cu53PRgm5aPHxMaZRguYHJfaNxmnmgoR129cKMvJk",
-  //   wallet: "6G8Cu53PRgm5aPHxMaZRguYHJfaNxmnmgoR129cKMvJk",
-  // },
-  // {
-  //   name: "archelon",
-  //   link: "https://pump.fun/profile/FNcrF6nt9BXswJrHom4hNmXCeW9no2C8wKh5UqdP8ueu",
-  //   wallet: "FNcrF6nt9BXswJrHom4hNmXCeW9no2C8wKh5UqdP8ueu",
-  // },
-  // {
-  //   name: "jazz",
-  //   link: "https://pump.fun/profile/FRSyazz3gamvxQ3vSyA9sdy2dWbnkTLgZgPnozQ3vXZT",
-  //   wallet: "FRSyazz3gamvxQ3vSyA9sdy2dWbnkTLgZgPnozQ3vXZT",
-  // },
-  // {
-  //   name: "rockked",
-  //   link: "https://pump.fun/profile/EPKVhqyGjYDE2HoPi8n9MjjkJPhiezT1Fxb7yECZJq6p",
-  //   wallet: "EPKVhqyGjYDE2HoPi8n9MjjkJPhiezT1Fxb7yECZJq6p",
-  // },
-  // {
-  //   name: "CryptoLouie",
-  //   link: "https://pump.fun/profile/8URSTGkPWUdTsKji9YncfU3QEDzaE7UqThUaSDbk5A72",
-  //   wallet: "8URSTGkPWUdTsKji9YncfU3QEDzaE7UqThUaSDbk5A72",
-  // },
-  // {
-  //   name: "Trader29",
-  //   link: "https://pump.fun/profile/9vXhFfEhn5sKrGeGit4ah3nbEsXUBiLPSCEHLHTcZL6C",
-  //   wallet: "9vXhFfEhn5sKrGeGit4ah3nbEsXUBiLPSCEHLHTcZL6C",
-  // },
-  // {
-  //   name: "OGDamon",
-  //   link: "https://pump.fun/profile/9mtRcD5Zo8e3WLUq3k3PWpBpFxJhZXLE1GbuZB5aopEF",
-  //   wallet: "9mtRcD5Zo8e3WLUq3k3PWpBpFxJhZXLE1GbuZB5aopEF",
-  // },
-  // {
-  //   name: "TysonCrypto_",
-  //   link: "https://pump.fun/profile/3eYQQb5sb99eysUUZGjNmAbC6jdGQY36nqPXVTfziaeX",
-  //   wallet: "3eYQQb5sb99eysUUZGjNmAbC6jdGQY36nqPXVTfziaeX",
-  // },
-  // {
-  //   name: "TheCopeDev",
-  //   link: "https://pump.fun/profile/4gkCnJh3teEXRZ3EfXSfSArBpy2pSHsd2JjMVaQfPz4a",
-  //   wallet: "4gkCnJh3teEXRZ3EfXSfSArBpy2pSHsd2JjMVaQfPz4a",
-  // },
+  {
+    name: "OGPeach",
+    link: "https://join.pump.fun/HSag/7gx4z3x2",
+    wallet: "CHXHjEdbzDxqzXzsh9Vs1jxMixnBSAJuqQ9bjZMzFqn9",
+  },
+  {
+    name: "berdush",
+    link: "https://join.pump.fun/HSag/n9tgbdif",
+    wallet: "HLNMn7ZcLmxfYXt4QTpc8g6xMqZoXR4ixpehswgbQhVG",
+  },
+  {
+    name: "appiesol_",
+    link: "https://join.pump.fun/HSag/cekxej0j",
+    wallet: "DieowDJ137xDRyCDn3YZYfAe4qzeGmdQJvryyqdWhtuc",
+  },
+  {
+    name: "borealj",
+    link: "https://pump.fun/profile/H3T4nbQV119capeaPjXK1FJPK3PuB5neAa2Dicyek7wG",
+    wallet: "H3T4nbQV119capeaPjXK1FJPK3PuB5neAa2Dicyek7wG",
+  },
+  {
+    name: "SagezUP",
+    link: "https://pump.fun/profile/AHGALeqAuRkC7cQJrKwjdL4fSxiz9HkgtMRcRGsrwaqk",
+    wallet: "AHGALeqAuRkC7cQJrKwjdL4fSxiz9HkgtMRcRGsrwaqk",
+  },
+  {
+    name: "spectacular",
+    link: "https://pump.fun/profile/6Fz4cnnvdRSqQzUnLS3Q5M35vo8uRnu5rag6Q6Kbb7s",
+    wallet: "6Fz4cnnvdRSqQzUnLS3Q5M35vo8uRnu5rag6Q6Kbb7s",
+  },
+  {
+    name: "OGSniffer",
+    link: "https://pump.fun/profile/8oHccwEN4eCk6Anb3dxCeT9UsNjW6pS8cU8RXadaC7i7",
+    wallet: "8oHccwEN4eCk6Anb3dxCeT9UsNjW6pS8cU8RXadaC7i7",
+  },
+  {
+    name: "tumors",
+    link: "https://pump.fun/profile/B6GK4Uk5HfcexdqfaFQKCu7cZw5LYdJ6bhi25BWq1Nic",
+    wallet: "B6GK4Uk5HfcexdqfaFQKCu7cZw5LYdJ6bhi25BWq1Nic",
+  },
+  {
+    name: "adebola",
+    link: "https://pump.fun/profile/DNyA4HRP65X1FB8HnqsyT1ZAvvb5ng8eZq4b1oAiWesC",
+    wallet: "DNyA4HRP65X1FB8HnqsyT1ZAvvb5ng8eZq4b1oAiWesC",
+  },
+  {
+    name: "roommate",
+    link: "https://pump.fun/profile/3SoYUq5eY8gn5p9Uz3fomA5ZbbHEpe6PhitttQ84GHBK",
+    wallet: "3SoYUq5eY8gn5p9Uz3fomA5ZbbHEpe6PhitttQ84GHBK",
+  },
+  {
+    name: "MagicCooker",
+    link: "https://pump.fun/profile/BvgE1K46Hd4g5vbeoy1GXfDdvvLZUmELa4WASKjG8skm",
+    wallet: "BvgE1K46Hd4g5vbeoy1GXfDdvvLZUmELa4WASKjG8skm",
+  },
+  {
+    name: "synciemann",
+    link: "https://pump.fun/profile/8x1q3VeNkjeznoUa29fF2vVHp2E7Ju9TrwS7y6AyiVMa",
+    wallet: "8x1q3VeNkjeznoUa29fF2vVHp2E7Ju9TrwS7y6AyiVMa",
+  },
+  {
+    name: "gaston_levai",
+    link: "https://pump.fun/profile/9fasCqz4yRErTZPEWBUuoYoKZzzSziEGSjAjnj1YHoGh",
+    wallet: "9fasCqz4yRErTZPEWBUuoYoKZzzSziEGSjAjnj1YHoGh",
+  },
+  {
+    name: "jspizzlecryptoo",
+    link: "https://pump.fun/profile/4z3WtX32eehkmnaNNstZWyAuVBhj6cgpk5JtkdTa4m4A",
+    wallet: "4z3WtX32eehkmnaNNstZWyAuVBhj6cgpk5JtkdTa4m4A",
+  },
+  {
+    name: "gutssay",
+    link: "https://pump.fun/profile/DGma4Uxm9JS6yLNdgYaxsZhwk2nxrRGMfMt5buXbiFCm",
+    wallet: "DGma4Uxm9JS6yLNdgYaxsZhwk2nxrRGMfMt5buXbiFCm",
+  },
+  {
+    name: "shredtrades",
+    link: "https://pump.fun/profile/ERhjPxBBain6CV1WTwXjjaeADWmS6P5THReYzLByVBst",
+    wallet: "ERhjPxBBain6CV1WTwXjjaeADWmS6P5THReYzLByVBst",
+  },
+  {
+    name: "DrHeisenberg",
+    link: "https://pump.fun/profile/49AuxnyoFm2mkYazK4usgmsEzXJaVurQAm9T5DWZTWuH",
+    wallet: "49AuxnyoFm2mkYazK4usgmsEzXJaVurQAm9T5DWZTWuH",
+  },
+  {
+    name: "ImJustAGuy1993",
+    link: "https://pump.fun/profile/2NsiXHVD8Ge2czhsM7cFKM9CTP1XnQHw6LJWGNTfennk",
+    wallet: "2NsiXHVD8Ge2czhsM7cFKM9CTP1XnQHw6LJWGNTfennk",
+  },
+  {
+    name: "Mzgete_",
+    link: "https://pump.fun/profile/GTuctg8YR5oH1jdAaGMvkb51MSWPHE9nLCc1zUrwss6L",
+    wallet: "GTuctg8YR5oH1jdAaGMvkb51MSWPHE9nLCc1zUrwss6L",
+  },
+  {
+    name: "younghogey",
+    link: "https://pump.fun/profile/9KPMHW2FuTrHBkPa8YQb2PR58V2KQcBXvyM21AFXvhQV",
+    wallet: "9KPMHW2FuTrHBkPa8YQb2PR58V2KQcBXvyM21AFXvhQV",
+  },
+  {
+    name: "edonfx",
+    link: "https://pump.fun/profile/GKMUxpHS5uoW1dqjxzyJP66bHC3GbsKaQKU1tzXmzReb",
+    wallet: "GKMUxpHS5uoW1dqjxzyJP66bHC3GbsKaQKU1tzXmzReb",
+  },
+  {
+    name: "CamaboLambo420",
+    link: "https://pump.fun/profile/Bfw66Qnx2rWi7y3rZNS5wCSrjcAkkrGV9XVfyay8N3Yj",
+    wallet: "Bfw66Qnx2rWi7y3rZNS5wCSrjcAkkrGV9XVfyay8N3Yj",
+  },
+  {
+    name: "liarliar",
+    link: "https://pump.fun/profile/6G8Cu53PRgm5aPHxMaZRguYHJfaNxmnmgoR129cKMvJk",
+    wallet: "6G8Cu53PRgm5aPHxMaZRguYHJfaNxmnmgoR129cKMvJk",
+  },
+  {
+    name: "archelon",
+    link: "https://pump.fun/profile/FNcrF6nt9BXswJrHom4hNmXCeW9no2C8wKh5UqdP8ueu",
+    wallet: "FNcrF6nt9BXswJrHom4hNmXCeW9no2C8wKh5UqdP8ueu",
+  },
+  {
+    name: "jazz",
+    link: "https://pump.fun/profile/FRSyazz3gamvxQ3vSyA9sdy2dWbnkTLgZgPnozQ3vXZT",
+    wallet: "FRSyazz3gamvxQ3vSyA9sdy2dWbnkTLgZgPnozQ3vXZT",
+  },
+  {
+    name: "rockked",
+    link: "https://pump.fun/profile/EPKVhqyGjYDE2HoPi8n9MjjkJPhiezT1Fxb7yECZJq6p",
+    wallet: "EPKVhqyGjYDE2HoPi8n9MjjkJPhiezT1Fxb7yECZJq6p",
+  },
+  {
+    name: "CryptoLouie",
+    link: "https://pump.fun/profile/8URSTGkPWUdTsKji9YncfU3QEDzaE7UqThUaSDbk5A72",
+    wallet: "8URSTGkPWUdTsKji9YncfU3QEDzaE7UqThUaSDbk5A72",
+  },
+  {
+    name: "Trader29",
+    link: "https://pump.fun/profile/9vXhFfEhn5sKrGeGit4ah3nbEsXUBiLPSCEHLHTcZL6C",
+    wallet: "9vXhFfEhn5sKrGeGit4ah3nbEsXUBiLPSCEHLHTcZL6C",
+  },
+  {
+    name: "OGDamon",
+    link: "https://pump.fun/profile/9mtRcD5Zo8e3WLUq3k3PWpBpFxJhZXLE1GbuZB5aopEF",
+    wallet: "9mtRcD5Zo8e3WLUq3k3PWpBpFxJhZXLE1GbuZB5aopEF",
+  },
+  {
+    name: "TysonCrypto_",
+    link: "https://pump.fun/profile/3eYQQb5sb99eysUUZGjNmAbC6jdGQY36nqPXVTfziaeX",
+    wallet: "3eYQQb5sb99eysUUZGjNmAbC6jdGQY36nqPXVTfziaeX",
+  },
+  {
+    name: "TheCopeDev",
+    link: "https://pump.fun/profile/4gkCnJh3teEXRZ3EfXSfSArBpy2pSHsd2JjMVaQfPz4a",
+    wallet: "4gkCnJh3teEXRZ3EfXSfSArBpy2pSHsd2JjMVaQfPz4a",
+  },
 
 
 
