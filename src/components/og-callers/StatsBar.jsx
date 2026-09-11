@@ -18,7 +18,7 @@ export function StatsBar() {
   const stats = [
     [peoplesIcon, data ? String(data.memberCount) : "—", "COMMUNITY MEMBERS"],
     [growthIcon, data?.totalPnl ?? "—", "TOTAL PNL (COMMUNITY)"],
-    [fireIcon, data?.totalValue ?? "—", "TOP AMOUNT"],
+    [fireIcon, data?.totalValue ?? "—", "TOTAL AMOUNT"],
     [diamondIcon, "100%", "COMMUNITY OWNED"],
   ];
 
