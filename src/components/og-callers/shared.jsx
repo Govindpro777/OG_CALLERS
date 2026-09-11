@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CircleUserRound } from "lucide-react";
+import logo from "../../assets/logo.png";
 
 export const reveal = {
   initial: { opacity: 0, y: 24 },
@@ -27,8 +27,8 @@ export function DiscordIcon(props) {
 export function Brand({ compact = false }) {
   return (
     <a href="#home" className="group flex min-w-0 items-center gap-3" aria-label="OG Callers home">
-      <span className={`${compact ? "size-9" : "size-11"} grid shrink-0 place-items-center rounded-full border border-primary bg-primary/10 text-primary shadow-neon transition-transform group-hover:rotate-6`}>
-        <CircleUserRound className={compact ? "size-6" : "size-7"} strokeWidth={2.4} />
+      <span className={`${compact ? "size-9" : "size-11"} grid shrink-0 place-items-center overflow-hidden rounded-full border border-primary bg-primary/10 shadow-neon transition-transform group-hover:rotate-6`}>
+        <img src={logo} alt="" className="size-full scale-125 object-cover object-top" />
       </span>
       <span className="min-w-0 font-display text-xl font-bold uppercase leading-none text-foreground sm:text-2xl">
         OG <span className="text-primary">Callers</span>
