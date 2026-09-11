@@ -21,7 +21,7 @@ export function AboutSection() {
   return (
     <Panel id="about" className="p-6 sm:p-10 lg:p-14">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 text-center">
-        <span className="grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border border-primary bg-primary/10 shadow-neon"><img src={logo} alt="" className="size-full scale-125 object-cover object-top" /></span>
+        <span className="grid size-11 shrink-0 place-items-center"><img src={logo} alt="" className="size-full object-contain" /></span>
         <p className="font-mono text-[12px] uppercase tracking-[0.3em] text-muted-foreground">OG Callers · The first official squad coin</p>
         <h2 className="text-glow mt-2 font-display text-[clamp(2rem,4.2vw,3.25rem)] font-bold uppercase leading-tight text-foreground">
           What is <span className="text-primary">OG Callers</span>

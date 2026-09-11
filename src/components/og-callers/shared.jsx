@@ -27,8 +27,8 @@ export function DiscordIcon(props) {
 export function Brand({ compact = false }) {
   return (
     <a href="#home" className="group flex min-w-0 items-center gap-3" aria-label="OG Callers home">
-      <span className={`${compact ? "size-9" : "size-11"} grid shrink-0 place-items-center overflow-hidden rounded-full border border-primary bg-primary/10 shadow-neon transition-transform group-hover:rotate-6`}>
-        <img src={logo} alt="" className="size-full scale-125 object-cover object-top" />
+      <span className={`${compact ? "size-9" : "size-11"} grid shrink-0 place-items-center transition-transform group-hover:rotate-6`}>
+        <img src={logo} alt="" className="size-full object-contain" />
       </span>
       <span className="min-w-0 font-display text-xl font-bold uppercase leading-none text-foreground sm:text-2xl">
         OG <span className="text-primary">Callers</span>
