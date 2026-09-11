@@ -49,12 +49,12 @@ export function Panel({ children, className = "", danger = false, ...props }) {
   );
 }
 
-export function SectionTitle({ icon: Icon, title, subtitle, danger = false, action = "VIEW ALL" }) {
+export function SectionTitle({ icon, title, subtitle, danger = false, action = "VIEW ALL" }) {
   return (
     <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3 border-b border-border/70 px-4 py-3 sm:px-5">
       <div className="flex min-w-0 items-center gap-3">
-        <span className={`grid size-9 shrink-0 place-items-center rounded-md ${danger ? "bg-danger/15 text-danger" : "bg-primary/15 text-primary"}`}>
-          <Icon className="size-6" fill="currentColor" />
+        <span className={`grid size-10 shrink-0 place-items-center rounded-md ${danger ? "bg-danger/15 text-danger" : "bg-primary/15 text-primary"}`}>
+          <img src={icon} alt="" className="size-7 object-contain" />
         </span>
         <div className="min-w-0">
           <h2 className={`truncate font-display text-lg font-bold uppercase sm:text-xl ${danger ? "text-danger" : "text-primary"}`}>{title}</h2>

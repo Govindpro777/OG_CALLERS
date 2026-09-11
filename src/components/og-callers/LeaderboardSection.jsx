@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Crown, Trophy } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import trophyIcon from "../../assets/trophy.png";
+import trophyNormalIcon from "../../assets/trophy normal.png";
 import { getLeaderboard } from "../../lib/pumpfun-leaderboard";
 import { Panel, SectionTitle } from "./shared";
 
@@ -14,7 +16,7 @@ export function LeaderboardSection() {
 
   return (
     <Panel id="leaderboard">
-      <SectionTitle icon={Trophy} title="Trader Leaderboard" subtitle="Top traders by profit (PNL)" action="LIVE" />
+      <SectionTitle icon={trophyIcon} title="Trader Leaderboard" subtitle="Top traders by profit (PNL)" action="LIVE" />
       <div className="overflow-x-auto px-3 pb-3 sm:px-5">
         <div className="min-w-[680px]">
           <div className="max-h-[440px] overflow-y-auto">
@@ -38,7 +40,7 @@ export function LeaderboardSection() {
                   key={name}
                   className={`grid grid-cols-[42px_1.1fr_0.78fr_0.66fr_0.56fr_0.72fr_26px] items-center gap-2 border-b border-border/65 px-2 py-2.5 text-xs transition-colors hover:bg-primary/5 ${index === 0 ? "bg-primary/5" : ""}`}
                 >
-                  <span className="font-mono font-bold text-foreground">{index === 0 ? <Crown className="size-4 text-gold" fill="currentColor" /> : index + 1}</span>
+                  <span className="font-mono font-bold text-foreground">{index === 0 ? <img src={trophyNormalIcon} alt="" className="size-6" /> : index + 1}</span>
                   <span className="flex items-center gap-2 font-semibold"><span className="grid size-7 shrink-0 place-items-center rounded-full border border-primary/50 bg-muted text-[13px]">OG</span>{name}</span>
                   <span className="font-mono text-[13px] text-muted-foreground">{wallet}</span>
                   <span className={`font-mono font-bold ${positive ? "text-primary" : "text-danger"}`}>{pnl}</span>
