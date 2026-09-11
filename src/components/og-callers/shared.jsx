@@ -61,9 +61,9 @@ export function SectionTitle({ icon, title, subtitle, danger = false, action = "
           <p className="text-xs text-muted-foreground sm:text-sm">{subtitle}</p>
         </div>
       </div>
-      <a href="#home" className={`mt-1 shrink-0 font-mono text-[12px] font-bold sm:text-[13px] ${danger ? "text-danger" : "text-primary"}`}>
+      {/* <a href="#home" className={`mt-1 shrink-0 font-mono text-[12px] font-bold sm:text-[13px] ${danger ? "text-danger" : "text-primary"}`}>
         {action} →
-      </a>
+      </a> */}
     </div>
   );
 }
