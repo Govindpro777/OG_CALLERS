@@ -282,7 +282,7 @@ function formatPercent(value: number) {
   return `${sign}${Math.abs(value).toFixed(1)}%`;
 }
 
-const PUMP_FUN_HEADERS = {
+export const PUMP_FUN_HEADERS = {
   accept: "*/*",
   origin: "https://pump.fun",
   "user-agent":
