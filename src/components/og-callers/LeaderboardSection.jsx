@@ -49,7 +49,7 @@ export function LeaderboardSection() {
                   <span className="font-mono text-[13px] font-bold text-primary">{ogHeld}</span>
                   <button
                     type="button"
-                    // onClick={() => setSelected({ wallet: fullWallet, name })}
+                    onClick={() => setSelected({ wallet: fullWallet, name })}
                     className="justify-self-start rounded border border-primary/50 px-2 py-1 font-mono text-[11px] font-bold uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                   >
                     Check
