@@ -47,13 +47,13 @@ export function LeaderboardSection() {
                   <span className={`font-mono font-bold ${positive ? "text-primary" : "text-danger"}`}>{pnl}</span>
                   <span className={`font-mono font-bold ${positive ? "text-primary" : "text-danger"}`}>{percent}</span>
                   <span className="font-mono text-[13px] font-bold text-primary">{ogHeld}</span>
-                  {/* <button
+                  <button
                     type="button"
-                    onClick={() => setSelected({ wallet: fullWallet, name })}
+                    // onClick={() => setSelected({ wallet: fullWallet, name })}
                     className="justify-self-start rounded border border-primary/50 px-2 py-1 font-mono text-[11px] font-bold uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                   >
                     Check
-                  </button> */}
+                  </button>
                   <a href={link} target="_blank" rel="noreferrer" aria-label="Open profile" className="text-primary">
                     <ArrowUpRight className="size-4" />
                   </a>
