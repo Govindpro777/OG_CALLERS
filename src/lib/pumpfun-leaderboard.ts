@@ -4,11 +4,14 @@ export type LeaderboardTrader = {
   name: string;
   link: string;
   wallet: string;
+  fullWallet: string;
   pnl: string;
   percent: string;
   pnlValue: number;
   ogHeld: string;
 };
+
+export const OGCALLERS_MINT = "DBDqhnAi5MjaHsk1JyUonAtUUrmRBJPjJi3GdiBLpump";
 
 const TRACKED_WALLETS = [
   {
@@ -337,6 +340,7 @@ export const getLeaderboard = createServerFn({ method: "GET" }).handler(
             name,
             link,
             wallet: shortenWallet(wallet),
+            fullWallet: wallet,
             pnl: formatUsd(data.pnl.usd),
             percent: formatPercent(data.percentage.usd),
             pnlValue: data.pnl.usd,
@@ -347,6 +351,7 @@ export const getLeaderboard = createServerFn({ method: "GET" }).handler(
             name,
             link,
             wallet: shortenWallet(wallet),
+            fullWallet: wallet,
             pnl: "—",
             percent: "—",
             pnlValue: Number.NEGATIVE_INFINITY,
@@ -359,3 +364,58 @@ export const getLeaderboard = createServerFn({ method: "GET" }).handler(
     return rows.sort((a, b) => b.pnlValue - a.pnlValue);
   },
 );
+
+export type WalletTrade = {
+  tx: string;
+  type: "buy" | "sell";
+  timeAgo: string;
+  amount: string;
+  sizeUsd: string;
+  marketCap: string;
+};
+
+type RawTrade = {
+  tx: string;
+  type: "buy" | "sell";
+  timestamp: string;
+  baseAmount: number;
+  amountUsd: number;
+};
+
+function formatTimeAgo(isoTimestamp: string) {
+  const diffMs = Date.now() - new Date(isoTimestamp).getTime();
+  const minutes = Math.floor(diffMs / 60_000);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  if (days > 0) return `${days}d ago`;
+  if (hours > 0) return `${hours}h ago`;
+  if (minutes > 0) return `${minutes}m ago`;
+  return "just now";
+}
+
+function formatUsdCompact(value: number) {
+  if (value >= 1_000_000) return `$${trimDecimal(value / 1_000_000)}M`;
+  if (value >= 1_000) return `$${trimDecimal(value / 1_000)}K`;
+  return `$${value.toFixed(2)}`;
+}
+
+// Fetches this wallet's OGCALLERS buy/sell history, server-side (avoids browser CORS).
+export const getWalletTrades = createServerFn({ method: "GET" })
+  .validator((wallet: string) => wallet)
+  .handler(async ({ data: wallet }): Promise<WalletTrade[]> => {
+    const res = await fetch(
+      `https://profile-api.pump.fun/v4/pnl/${wallet}/trades?mint=${OGCALLERS_MINT}&limit=200`,
+      { headers: PUMP_FUN_HEADERS },
+    );
+    if (!res.ok) throw new Error(`trades request failed (${res.status}) for ${wallet}`);
+    const data = (await res.json()) as { trades: RawTrade[] };
+
+    return data.trades.map((trade) => ({
+      tx: trade.tx,
+      type: trade.type,
+      timeAgo: formatTimeAgo(trade.timestamp),
+      amount: formatTokenAmount(trade.baseAmount),
+      sizeUsd: `$${trade.amountUsd.toLocaleString("en-US", { maximumFractionDigits: 2 })}`,
+      marketCap: formatUsdCompact((trade.amountUsd / trade.baseAmount) * 1_000_000_000),
+    }));
+  });
