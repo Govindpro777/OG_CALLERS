@@ -5,7 +5,8 @@ import bgVideo from "../../assets/bgvideoo.mp4";
 import mascots from "../../assets/mobilebg.png";
 import { DiscordIcon, XLogoIcon } from "./shared";
 
-const CA_ADDRESS = "eshjjdshbnewjbmbswejhsdfnm";
+const CA_ADDRESS = "DBDqhnAi5MjaHsk1JyUonAtUUrmRBJPjJi3GdiBLpump";
+const CA_ADDRESS_SHORT = `${CA_ADDRESS.slice(0, 6)}...${CA_ADDRESS.slice(-6)}`;
 
 // Hero introduces the community with its signature mascot line-up.
 export function HeroSection() {
@@ -23,7 +24,9 @@ export function HeroSection() {
 
   const caPill = (
     <motion.div whileHover={{ scale: 1.02 }} className="flex h-12 min-w-0 max-w-full items-center gap-3 rounded-md bg-primary px-6 font-mono text-xs font-black text-primary-foreground shadow-neon-strong">
-      <span className="truncate">CA {CA_ADDRESS}</span>
+      <span className="shrink-0" title={CA_ADDRESS}>
+        CA <span className="lg:hidden">{CA_ADDRESS_SHORT}</span><span className="hidden lg:inline">{CA_ADDRESS}</span>
+      </span>
       <button
         type="button"
         onClick={handleCopyCA}
