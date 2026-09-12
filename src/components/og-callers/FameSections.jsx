@@ -6,6 +6,7 @@ import hof1 from "../../assets/hof-1.jpeg";
 import hof2 from "../../assets/hof-2.jpeg";
 import hof3 from "../../assets/hof-3.jpeg";
 import hof4 from "../../assets/hof-4.jpeg";
+import hof5 from "../../assets/hof-6.jpeg"
 import redIcon from "../../assets/red.png";
 import shame1 from "../../assets/shame-1.jpeg";
 import shame2 from "../../assets/shame-2.jpeg";
@@ -15,7 +16,7 @@ import { ImagePreviewModal } from "./ImagePreviewModal";
 import { Panel, SectionTitle } from "./shared";
 
 const heroes = [
-  ["cryptogodfather","+$17,391 PNL","OG BELIEVER","Was the first person to blast and believe in my vision before I even spoke to him.",null],
+  ["cryptogodfather","+$17,391 PNL","OG BELIEVER","Was the first person to blast and believe in my vision before I even spoke to him.", hof5],
   ["hannahful","+$1,290 PNL","UP BIG","None of these people sold. Held strong the whole way.",hof1],
   ["tumors","+$10,226 PNL","UP BIG","Turned real conviction into a real bag — never wavered.",hof2],
   ["lastunknown","+$23,730 PNL","UP BIG","Anonymous but the biggest believer in the squad.",hof3],
