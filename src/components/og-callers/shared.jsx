@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import logo from "../../assets/logo.png";
 
+export const X_URL = "https://x.com/ogcallers?s=11";
+export const DISCORD_URL = "https://discord.gg/jdf3rEjnwN";
+
 export const reveal = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },

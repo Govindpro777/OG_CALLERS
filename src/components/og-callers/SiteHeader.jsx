@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Brand, XLogoIcon } from "./shared";
+import { Brand, DISCORD_URL, DiscordIcon, X_URL, XLogoIcon } from "./shared";
 
 const links = [
   ["HOME", "home"],
@@ -27,8 +27,11 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <a href="#community" className="inline-flex h-9 shrink-0 items-center gap-2 rounded-md border border-primary px-3 font-mono text-[13px] font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:h-10 sm:px-5">
+          <a href={X_URL} target="_blank" rel="noreferrer" className="inline-flex h-9 shrink-0 items-center gap-2 rounded-md border border-primary px-3 font-mono text-[13px] font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:h-10 sm:px-5">
             <XLogoIcon className="size-4" />SOCIAL
+          </a>
+          <a href={DISCORD_URL} target="_blank" rel="noreferrer" aria-label="Discord" className="grid size-9 shrink-0 place-items-center rounded-md border border-primary text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:size-10">
+            <DiscordIcon className="size-4" />
           </a>
           <button
             type="button"

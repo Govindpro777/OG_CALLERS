@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Check, Copy } from "lucide-react";
 import bgVideo from "../../assets/bgvideoo.mp4";
 import mascots from "../../assets/mobilebg.png";
-import { DiscordIcon, XLogoIcon } from "./shared";
+import { DISCORD_URL, DiscordIcon, X_URL, XLogoIcon } from "./shared";
 
 const CA_ADDRESS = "DBDqhnAi5MjaHsk1JyUonAtUUrmRBJPjJi3GdiBLpump";
 const CA_ADDRESS_SHORT = `${CA_ADDRESS.slice(0, 6)}...${CA_ADDRESS.slice(-6)}`;
@@ -37,8 +37,8 @@ export function HeroSection() {
       </button>
     </motion.div>
   );
-  const xSocial = <a href="#community" aria-label="X social" className="social-button shrink-0"><XLogoIcon className="size-5" /></a>;
-  const discordSocial = <a href="#community" aria-label="Discord" className="social-button shrink-0"><DiscordIcon className="size-5" /></a>;
+  const xSocial = <a href={X_URL} target="_blank" rel="noreferrer" aria-label="X social" className="social-button shrink-0"><XLogoIcon className="size-5" /></a>;
+  const discordSocial = <a href={DISCORD_URL} target="_blank" rel="noreferrer" aria-label="Discord" className="social-button shrink-0"><DiscordIcon className="size-5" /></a>;
 
   const caButton = (
     <>
